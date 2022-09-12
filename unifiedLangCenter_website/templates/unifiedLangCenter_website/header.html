@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="">
+    <nav class="py-3 bg-gradient-to-t to-gray-400 from-gray-500 text-gray-50 md:py-5">
+        <div class="flex justify-between gap-5 px-4 mx-auto md:items-center lg:text-lg">
+            <div class="text-lg px- md:text-xl">
+                <a href="{% url 'index' %}">
+                    <!-- lorem -->
+                    Unified&nbspGerman&nbspLanguage&nbspCenter
+                </a>
+            </div>
+            <div class="hidden gap-10 mt-10 -ml-48 text-sm border-t md:-ml-0 text-start md:text-lg md:px-24 md:flex md:mt-0 md:border-none" id="sideMenu">
+                <div class="gap-5 uppercase md:flex">
+                    <div class="mt-3 md:mt-0 hover:text-blue-300 hover: " id="close_menu">
+                        <a href="#about">About&nbspUs</a>
+                    </div>
+                    <div class="mt-3 md:mt-0 hover:text-blue-300 hover: " id="close_menu2">
+                        <a href="#services">services</a>
+                    </div>
+                    <div class="mt-3 md:mt-0 hover:text-blue-300 hover: " id="close_menu3">
+                        <a href="#gallery">Photo&nbspgallery </a>
+                    </div>
+                    <div class="mt-3 md:mt-0 hover:text-blue-300 hover: " id="close_menu5">
+                        <a href="#testimonials">Testimonials </a>
+                    </div>
+                    <div class="mt-3 md:mt-0 hover:text-blue-300 hover: " id="close_menu4">
+                        <a href="#blog">Posts </a>
+                    </div>
+                    <!-- <div class="mt-3 md:mt-0 hover:text-blue-300 hover: " id="close_menu4">
+                        <a href="#blog">practice</a>
+                    </div> -->
+                </div>
+            </div>
+            <div id="ham" class="px-0 cursor-pointer md:hidden ">
+                <img src="{% static 'images/icons/icons8_menu_50px_1.png' %}" alt="" class="h-10 ">
+            </div>
+        </div>
+    </nav>     
+</div>
+
+
+<script src="{% static 'js/style2.js' %}"></script> 

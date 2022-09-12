@@ -1,0 +1,44 @@
+{% load static %}
+
+
+<div class="mt-10 overflow-x-auto bg-gray-300 shadow-xl" id="blog">
+    <div class="grid-cols-12 gap-3 mt-10 border md:flex py-">
+        <div class="col-span-6 px-2 px-3 py-10 mt-2 border">
+            <div class="justify-center grid-cols-12 lg:">
+                <div class="col-span-6 lg:w-4/5">
+                    <img src="{% static 'images/iStock_87300957_LARGE.jpg' %}" alt="" >
+                </div>
+                <div class="col-span-6 mt-5 lg:w-/5">
+                    2 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Explicabo libero distinctio maxime ea autem quibusdam laudantium,
+                    delectus provident placeat voluptatibus 
+                </div>
+            </div>
+        </div>
+        <div class="grid justify-center col-span-6 px-3 py-10 mt-2 border">
+            <div class="grid-cols-12 gap-1 ">
+                <div class="col-span-6 lg:w-4/5">
+                    <img src="{% static 'images/aet-students-1000x750-c-default.jpg' %}" alt="" class="h-/5">
+                </div>
+                <div class="col-span-6 lg:w- text-gray-">
+                    1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Alias labore at consequuntur porro aliquam hic temporibus 
+                </div>
+            </div>
+        </div>
+        {% if blog_feed %}
+            {% for blog_items in blog_feed %}  
+                <div class="col-span-6 px-2 px-3 py-10 mt-2 border">
+                    <div class="justify-center grid-cols-12 lg:">
+                        <div class="col-span-6 lg:w-4/5">
+                            <img src="{{ blog_items.photo.url }}" alt="pic" >
+                        </div>
+                        <div class="col-span-6 mt-5 lg:w-/5">
+                            {{ blog_items.write_post }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>

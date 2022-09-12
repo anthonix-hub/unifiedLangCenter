@@ -1,0 +1,86 @@
+{% load static %}
+{% load tailwind_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    {% include "unifiedLangCenter_website/head.html" %}
+</head>
+<body>
+    <!--*** header ****-->
+    <section class="fixed z-20 w-full shadow-md">
+        <div class="">
+            <nav class="py-3 bg-gradient-to-t to-gray-400 from-gray-500 text-gray-50 md:py-5">
+                <div class="flex justify-between gap-5 px-4 mx-auto md:items-center lg:text-lg">
+                    <div class="px-2 text-sm font-semibold md:text-xl">
+                        <a href="{% url 'index' %}">
+                            lorem
+                            <!-- unifiedGermanLanguageCenter -->
+                        </a>
+                    </div>
+                    <!-- <div class="hidden gap-10 mt-10 text-center border-t md:text-lg md:px-24 md:flex md:mt-0 md:border-none" id="sideMenu">
+                        <div class="gap-5 uppercase md:flex">
+                            <div class="mt-3 md:mt-0 hover:text-gray-700 hover: " id="close_menu">
+                                <a href="#about">About&nbspUs</a>
+                            </div>
+                            <div class="mt-3 md:mt-0 hover:text-gray-700 hover: " id="close_menu2">
+                                <a href="#services">services</a>
+                            </div>
+                            <div class="mt-3 md:mt-0 hover:text-gray-700 hover: " id="close_menu3">
+                                <a href="#gallery">Photo gallery </a>
+                            </div>
+                            <div class="mt-3 md:mt-0 hover:text-gray-700 hover: " id="close_menu5">
+                                <a href="#testimonials">Testimonials </a>
+                            </div>
+                            <div class="mt-3 md:mt-0 hover:text-gray-700 hover: " id="close_menu4">
+                                <a href="#blog">Posts </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ham" class="px-10 cursor-pointer md:hidden ">
+                        <img src="{% static 'images/icons/icons8_menu_50px_1.png' %}" alt="" class="h-10 ">
+                    </div>
+                </div> -->
+            </nav>     
+        </div>
+    </section>
+    <section class="mt-"><!--practice content-->
+        <div class="px-5 py-20 text-gray-800 ">
+            <div class="grid-cols-12 py-5 border shadow-2xl md:flex">
+                <div class="col-span-6 px-4 py-2 py-10 bg-gray-300 md:px-20">
+                    <img src=" {% static 'images/German_words.jpg' %} " alt="">
+                    <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    <form action="" method="POST">{% csrf_token %}
+                        <div class="py-10 ">
+                            {{ form|crispy }}
+                        </div>
+                        <div class="flex justify-center">
+                            <button type="submit" class="px-10 py-1 bg-yellow-200 rounded-full shadow-xl hover:bg-yellow-600">
+                                Translate
+                            </button>
+                        </div>
+                    </form> -->
+                </div>
+                <div class="col-span-6 px-10 py-10 ">
+                    <img src=" {% static 'images/Gernam_questions_Copy.jpg' %} " alt="">
+                    <!-- odit magni sunt dolorem exercitationem assumenda possimus, est 
+                    accusantium mollitia quasi minus aliquid cumque! Repellendus! -->
+                </div>
+            </div>
+            <div class="mt-10">
+                start Lorem ipsum, dolor sit amet conpviewssectetur adipisicing elit. Incidunt vitae soluta repellat ratione, deserunt, accusantium est unde officiis, quam molestias doloremque rem debitis quibusdam quod eius veritatis consequatur. Necessitatibus, reprehenderit.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt vitae soluta repellat ratione, deserunt, accusantium est unde officiis, quam molestias doloremque rem debitis quibusdam quod eius veritatis consequatur. Necessitatibus, reprehenderit.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt vitae soluta repellat ratione, deserunt, accusantium est unde officiis, quam molestias doloremque rem debitis quibusdam quod eius veritatis consequatur. Necessitatibus, reprehenderit.
+            </div>
+        </div>
+    </section>
+    <!--/ .practice content-->
+    
+</body>
+<footer>
+    <section class="">
+        {% include "unifiedLangCenter_website/footer.html" %}
+    </section>
+</footer>
+</html>

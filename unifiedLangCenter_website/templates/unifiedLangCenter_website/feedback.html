@@ -1,0 +1,29 @@
+{% load static %}
+<!-- {% load tailwind_filters %} -->
+
+
+<div class="px-5 py-10 bg-gray-200 md:px-20 ">
+    <div class="py-4 text-gray-600 text-md md:text-lg">
+        Get in touch with us, drop your message below
+    </div>
+    <div class="">
+        <form action="" method="post">{% csrf_token %}
+                <div class="block gap-5">
+                    <div class="md:w-3/5 ">
+                        {{visitor_feedback.name |as_crispy_field}}
+                    </div>
+                    <div class="md:w-3/5 ">
+                        {{visitor_feedback.email |as_crispy_field}}
+                    </div>
+                </div>
+                <div class="md:w-3/5 ">
+                    {{visitor_feedback.message |as_crispy_field}}
+                </div>
+            <div class="flex justify-start">
+                <button type="submit" class="px-32 py-2 bg-blue-200 shadow-xl p- rounded-xl hover:bg-blue-300">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

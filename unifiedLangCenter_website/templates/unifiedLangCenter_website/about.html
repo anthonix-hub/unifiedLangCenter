@@ -1,0 +1,171 @@
+{% load static %}
+
+<div class="">
+    <div class="px-2 md:px-10">
+        <div class="text-2xl font-semibold">
+            About The Unified German Language Center
+        </div>
+        <div class="grid-cols-12 gap-3 text-lg mt- md:flex">
+            <div class="col-span-4 py-5 md:w-2/3 " >
+                {% for about in contents_feed %}
+                  {{about.about| safe}}
+                {% endfor %}
+            </div>
+            <div class="col-span-8 ">
+                <img src="{% static 'images/main-qimg-b88768ccbb04a3b48ef17a4746ab38bc.png' %}" alt="" class="object-center ">
+            </div>
+        </div>
+    </div>
+    <div class="px-3 py-10 mt-10 border shadow-md font- md:mt-10 bg-gradient-to-t to-gray-50 from-gray-200 border-t-gray-800">
+        <span class="py-10 mx-5 text-blue-400 md:px-10 text-md md:text-xl">
+            Get in touch with us: 
+        </span>
+        <div class="justify-center grid-cols-12 gap-5 mt-5 text-center md:flex">
+            <div class="col-span-6">
+                <span class="items-center mt-2 text-lg md:text-xl">
+                    <span class="flex items-center gap-1 text-gray-800 justify-c text-700">
+                        <span class="p-1 bg-gray-900 rounded-full ">
+                            <img src="{% static 'images/icons/icons8_location_80px.png' %}" alt="" class="w-8"> 
+                        </span>
+                        {% for address in contents_feed %}
+                            <span>{{address.address}}</span>
+                        {% endfor %}
+                    </span>
+                </span>
+                <div class="col">
+                    <span class="flex items-center gap-1 mt-2 text-lg md:text-xl justify-c text-700">
+                        <span class="p-1 bg-gray-900 rounded-full">
+                            <img src="{% static 'images/icons/icons8_phone_80px.png' %}" alt="" class="w-8">
+                        </span>
+                        {% for fone_num in contents_feed %}
+                            <span>{{fone_num.phone_number}}</span> 
+                        {% endfor %}
+                    </span>
+                </div>
+            </div>
+            <div class="col-span-6">
+                <!-- <div class="col">
+                    <span class="flex items-center gap-1 mt-2 text-lg md:text-xl justify-c text-700">
+                        <span class="p-1 bg-gray-900 rounded-full">
+                            <img src="{% static 'images/icons/icons8_phone_80px.png' %}" alt="" class="w-8">
+                        </span>
+                        {% for fone_num in contents_feed %}
+                            <span>{{fone_num.phone_number}}</span> 
+                        {% endfor %}
+                    </span>
+                </div> -->
+                <div class="col ">
+                    <span class="flex justify-start mt-2 text-lg justify- items- gap- md:text-xl text-700">
+                        <span class="p-1 bg-gray-900 rounded-full">
+                            <img src="{% static 'images/icons/icons8_time_span_80px.png' %}" alt="" class="w-8 md:w-8">
+                        </span>
+                        <span >
+                            {% for biz_days in contents_feed %}
+                                {{ biz_days.business_days|safe }}
+                            {% endfor %}
+                        </span>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="flex items-center gap-3 mt-2 text-lg md:text-xl text-700">
+                        <span class="p-1 bg-gray-900 rounded-full">
+                            <img src="{% static 'images/icons/icons8_mail_96px.png' %}" alt="" class="w-8">
+                        </span>
+                        <span>
+                            {% for email in contents_feed %}
+                                {{email.mail}}
+                            {% endfor %}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-10 px-" id="services">
+        <span class="flex justify-center py-5 text-2xl">
+            -- Other Services rendered --
+        </span>
+        <div class="mx-auto">
+            <div class="grid-cols-12 gap-5 px-3 sm:grid sm:gap-5">
+                <div class="px-5 py-10 mt-3 border rounded-md shadow-md bg-gray-50 md:col-span-4 sm:col-span-6 sm:mt-1 hover:shadow-2xl" >
+                    <div class="" id="img_hover" >
+                        <img src="{% static 'images/icons/icons8_test_passed_100px.png' %}" alt="feature-img" id="hover_img" class="transition duration-500 ease-in-out transform h-14 bg-white-600 hover:-translate-y-1 hover:scale-110">
+                    </div>
+                    <div class="transition duration-500 ease-in-out transform select-none hover:-translate-y-1 hover:scale-110">
+                        <span class="text-xl text-green-500 ">
+                            Legalization of Document
+                        </span><br>
+                        <span class="">
+                            We not only teach foreign languages but also assist and give professional advice to individuals on how to go about securing Visa to countries of their choice.
+                        </span>
+                    </div>
+                </div>
+                <div class="px-5 py-10 mt-3 transition ease-in transform border rounded-md shadow-md bg-gray-50 md:col-span-4 sm:col-span-6 sm:mt-1 hover:shadow-2xl" >
+                    <div class="" >
+                        <img src="{% static 'images/icons/icons8_guarantee_48px.png' %}" alt="feature-img" class="transition duration-500 ease-in-out transform rounded-full bg-white-600 hover:-translate-y-1 hover:scale-110">
+                    </div>
+                    <div class="transition duration-500 ease-in-out transform select-none hover:-translate-y-1 hover:scale-110">
+                        <span class="text-xl text-green-500 ">
+                            Travel Insurance
+                        </span><br>
+                        <span>
+                            Helping you with reaching travel Insurance companies, to ensure you have a secured and risk-free travel.
+                        </span>
+                    </div>
+                </div>
+                <div class="px-5 py-10 mt-3 transition ease-in transform border rounded-md shadow-md bg-gray-50 md:col-span-4 sm:col-span-6 sm:mt-1 hover:shadow-2xl" >
+                    <div class="" >
+                        <img src="{% static 'images/icons/icons8_hotel_52px.png' %}" alt="feature-img" class="transition duration-500 ease-in-out transform bg-white-600 hover:-translate-y-1 hover:scale-110">
+                    </div>
+                    <div class="transition duration-500 ease-in-out transform select-none hover:-translate-y-1 hover:scale-110">
+                        <span class="text-xl text-green-500 ">
+                            Hotel Booking
+                        </span><br>
+                        <span>
+                            You can be rest assured of getting good and affordable hotel accommodation in the country of your destination.
+                        </span>
+                    </div>
+                </div>
+                <div class="px-5 py-10 mt-3 transition ease-in transform border rounded-md shadow-md bg-gray-50 md:col-span-4 sm:col-span-6 sm:mt-1 hover:shadow-2xl" >
+                    <div class="" >
+                        <img src="{% static 'images/icons/icons8_Travel_Diary_48px.png' %}" alt="feature-img" class="transition duration-500 ease-in-out transform rounded-full bg-white-600 hover:-translate-y-1 hover:scale-110">
+                    </div>
+                    <div class="transition duration-500 ease-in-out transform select-none hover:-translate-y-1 hover:scale-110">
+                        <span class="text-xl text-green-500 ">
+                            Flight Booking
+                        </span><br>
+                        <span>
+                            We engage in flight bookings and other flight schedules, to endure you don't miss your flight.
+                        </span>
+                    </div>
+                </div>
+                <div class="px-5 py-10 mt-3 transition ease-in transform border rounded-md shadow-md bg-gray-50 md:col-span-4 sm:col-span-6 sm:mt-1 hover:shadow-2xl" >
+                <div class="" >
+                        <img src="{% static 'images/icons/icons8_grades_60px.png' %}" alt="feature-img" class="transition duration-500 ease-in-out transform rounded-full bg-white-600 hover:-translate-y-1 hover:scale-110">
+                    </div>
+                    <div class="transition duration-500 ease-in-out transform select-none hover:-translate-y-1 hover:scale-110">
+                        <span class="text-xl text-green-500 ">
+                            Admission into Schools Abroad
+                        </span><br>
+                        <span>
+                            We have a record of successfully securing admission for many of our students, into good and reputable schools abroad
+                        </span>
+                    </div>
+                </div>
+                <div class="px-5 py-10 mt-3 transition ease-in transform border rounded-md shadow-md bg-gray-50 md:col-span-4 sm:col-span-6 sm:mt-1 hover:shadow-2xl" >
+                    <div class="" >
+                        <img src="{% static 'images/icons/icons8_visa_64px.png' %}" alt="Visa booking" class="transition duration-500 ease-in-out transform rounded-full bg-white-600 hover:-translate-y-1 hover:scale-110">
+                    </div>
+                    <div class="transition duration-500 ease-in-out transform select-none hover:-translate-y-1 hover:scale-110" >
+                        <span class="text-xl text-green-500 ">
+                            Booking of Visa Appointments
+                        </span><br>
+                        <span>
+                            Your Visa Appointments is our top most priority if you choose to trust us with it, getting Visa to study, Business or plessure is as easy as it can get.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

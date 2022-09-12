@@ -1,0 +1,175 @@
+{% load static %}
+
+
+<div class="mt-20 shadow-md shadow-xl select-none ">
+    <div class="grid-cols-12 gap-6 px-5 py-6 bg-gray-200 md:flex "> 
+        <div class="col-span-6">
+            <div class="block grid-cols-12 gap-5">
+                <div class="col-span-6 ">
+                    <span class="text-xl font-semibold ">unifiedGermanLanguageCenter®</span><br>
+                    <div class="mt-5 text-sm text-gray-600">
+                        We the best in what we do, teaching of <b>German, Italian, French, Portuguese</b> and more.<br>
+                        Learn these languages in a short time of constant<br> practise and guild from us.
+                        We have a track recoed of success in our approach <br>to teaching and dedicaton
+                        to making sure our students begin to speak and write any modern foreign language.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden col-span-6 lg:block">
+            <div class="block grid-cols-12 gap-5">
+                <div class="grid justify-center col-span-6 text-gray-400 mt- md:mt-">
+                    <span class="p-1 text-lg text-gray-800 bg-gray-300 md:text-xl ">page&nbspNavigation</span>
+                    <div class="grid-cols-12 uppercase ">
+                        <div class="col-span-4 mt-3 text-md hover:text-gray-600">
+                            <a href="#">*back to top</a>
+                        </div>
+                        <div class="col-span-4 mt-3 hover:text-gray-600">
+                            <a href="#about">*About&nbspUs</a>
+                        </div>
+                        <div class="col-span-4 mt-3 hover:text-gray-600">
+                            <a href="#services">*services</a>
+                        </div>
+                        <div class="col-span-4 mt-3 hover:text-gray-600">
+                            <a href="#gallery">*Photo gallery </a>
+                        </div>
+                        <div class="col-span-4 mt-3 hover:text-gray-600">
+                            <a href="#testimonials">*Testimonials </a>
+                        </div>
+                        <div class="col-span-4 mt-3 hover:text-gray-600">
+                            <a href="#blog">*Posts </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-6 mt-10 border-t md:mt-0">
+            <div class="">
+                <span class="p-1 text-lg text-gray-800 bg-gray-300 shadow-sm md:text-xl">
+                    Major services we render
+                </span><br>
+                <span class="text-xs">Apart from Language Couaching and translation we also render the following services:</span>
+                <div class="col-span-6 ">
+                    <span class="mt-2 ">
+                        <span class="flex items-center gap-1 justify-">
+                            <span class="p-1 ">
+                                <img src="{% static 'images/icons/icons8_visa_96px.png' %}" alt="" class="w-6 "> 
+                            </span>                            
+                            <span class="text-md md-text-lg">Booking of Visa Appointments</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="col-span-6">
+                <div calass="flex justify- col">
+                        <span class="flex items-center justify-start gap-1">
+                            <span class="p-1 ">
+                                <img src="{% static 'images/icons/icons8_traveler_96px.png' %}" alt="" class="w-6 bg-gray-400 rounded ">
+                            </span>
+                            <span>Flight Booking</span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span class="flex items-center gap-1 mt-2 justify- ">
+                            <span class="p-1 ">
+                                <img src="{% static 'images/icons/icons8_hotel_96px_1.png' %}" alt="" class="w-6 ">
+                            </span>
+                            <span class=" text-md md:text-lg">
+                                Hotel Booking
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span class="flex items-center gap-1 mt-2 justify- ">
+                            <span class="p-1 ">
+                                <img src="{% static 'images/icons/icons8_grades_60px.png' %}" alt="" class="w-6 ">
+                            </span>
+                            <span class=" text-md md:text-lg">
+                                Admission into Schools Abroad
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span class="flex items-center gap-1 mt-2 justify- ">
+                            <span class="p-1 ">
+                                <img src="{% static 'images/icons/icons8_test_passed_100px.png' %}" alt="" class="w-6 ">
+                            </span>
+                            <span class=" text-md md:text-lg">
+                                Legalization of Document
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span class="flex items-center gap-1 mt-2 justify- ">
+                            <span class="p-1 ">
+                                <img src="{% static 'images/icons/icons8_guarantee_48px.png' %}" alt="" class="w-6 ">
+                            </span>
+                            <span class=" text-md md:text-lg">
+                                Travel Insurance
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-6 mt-10 md:mt-0">
+            <span class="p-1 text-lg bg-gray-300 md:text-xl text-gray">
+                Contacts
+            </span>
+            <div class="mt-5">
+                <div class="col-span-6">
+                    <span class="mt-2 text-md md:text-lg ">
+                        <span class="flex items-center gap-1 text-blue-600 justify-c">
+                            <span class="p-1 bg-gray-900 rounded-full ">
+                                <img src="{% static 'images/icons/icons8_location_80px.png' %}" alt="" class="w-6 md:w-8"> 
+                            </span>                            
+                            <span>
+                                {% for address in contents_feed %}
+                                    {{ address.address|safe }}
+                                {% endfor %}
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                <div class="col-span-6">
+                    <div class="col">
+                        <span class="flex items-center gap-2 mt-2 text-md md:text-lg justify-c">
+                            <span class="p-1 bg-gray-900 rounded-full">
+                                <img src="{% static 'images/icons/icons8_phone_80px.png' %}" alt="" class="w-6 md:w-6">
+                            </span>
+                            {% for fone_num in contents_feed %}
+                                <span>{{fone_num.phone_number|safe }}</span> 
+                            {% endfor %}
+                        </span>
+                    </div>
+                    <div class="col-span-6">
+                        <span class="flex gap-1 mt-2 items- text-md md:text-lg justify-c">
+                            <span class="p-1 bg-gray-900 rounded-full">
+                                <img src="{% static 'images/icons/icons8_time_span_80px.png' %}" alt="" class="w-6 md:w-8">
+                            </span>
+                            <span>
+                                {% for biz_days in contents_feed %}
+                                    {{biz_days.business_days|safe }}
+                                {% endfor %}
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col-span-6">
+                        <span class="flex items-center gap-1 mt-2 text-md md:text-lg justify-c">
+                            <span class="p-1 bg-gray-900 rounded-full">
+                                <img src="{% static 'images/icons/icons8_mail_96px.png' %}" alt="" class="w-6 md:w-8">
+                            </span>
+                            <span class="">
+                                {% for email in contents_feed %}
+                                    {{email.mail|safe}}
+                                {% endfor %}
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="px-5 py-4 text-gray-300 bg-gray-500 md:text-lg text-md ">
+        unifiedGermanLanguageCenter® 2021
+    </div>
+</div>

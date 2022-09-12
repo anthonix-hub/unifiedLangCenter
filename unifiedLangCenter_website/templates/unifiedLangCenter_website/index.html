@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "unifiedLangCenter_website/head.html" %}
+</head>
+<body class="bg-gray-100 select-none">
+    <!--*** header ****-->
+    <section class="fixed z-20 w-full shadow-md">
+        {% include "unifiedLangCenter_website/header.html" %}
+    </section>
+    <!--*** slider ****-->
+    <section class="py-16 md:py-20 bg-gradient-to-r to-gray-300 from-blue-300">     
+        {% include "unifiedLangCenter_website/slider.html" %}
+    </section>
+    <!--*** about ****-->
+    <section id="about" class="px-3 py-20 " >
+        {% include "unifiedLangCenter_website/about.html" %}
+    </section>
+    <!--*** features ****-->
+    <section id="features" class="px-3">
+        {% include "unifiedLangCenter_website/features.html" %}
+    </section>
+    <!--*** gallery ****-->
+    <section  class="px-3">
+        {% include "unifiedLangCenter_website/gallery.html" %}
+    </section>
+    <!--*** testimonials ****-->
+    <section id="testimonials" class="px-3">
+        {% include "unifiedLangCenter_website/testimonial.html" %}
+    </section>
+    <!--*** blog ****-->
+    <section id="" class="px-3">
+        {% include "unifiedLangCenter_website/blog.html" %}
+    </section>
+    <!--*** feedback ****-->
+    <section id="feedback" class="px-3">
+        {% include "unifiedLangCenter_website/feedback.html" %}
+    </section>
+</body>
+<footer class="">
+    <section class="">
+        {% include "unifiedLangCenter_website/footer.html" %}
+    </section>
+</footer>
+</html>
+
+<script src="{% static 'js/smooth-scroll.js' %}"></script>

@@ -1,0 +1,72 @@
+{% load static %}
+{% load tailwind_filters %}
+
+<div id="testimonials" class="px-5 mt-20">
+    <div class="text-2xl font-semibold">
+        Testimonies from our students
+    </div>
+    <div class="px-9 md:px-20">
+        <div class="grid-cols-12 gap-5 text-gray-700 md:flex ">
+            <div class="col-span-6 px-3 py-5">
+                <i class="px-10 text-md">
+                    <b class="text-5xl text-red-700 ">"</b>
+                    1b Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Explicabo libero distinctio maxime ea autem quibusdam laudantium,
+                    delectus provident placeat voluptatibus "
+                </i><br>
+                <span class="text-xl font-semibold">-lorem parental</span><br>
+            </div>
+            <div class="col-span-6 px-3 py-5">
+                <i class="px-10 text-md">
+                    <b class="text-5xl text-red-700 ">"</b>
+                    2b Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Explicabo libero distinctio maxime ea autem quibusdam laudantium,
+                    delectus provident placeat voluptatibus "
+                </i><br>
+                <span class="text-xl font-semibold">-lorem parental</span><br>
+            </div>
+            <div class="col-span-6 px-3 py-5">
+                <i class="px-10 text-md">
+                    <b class="text-5xl text-red-700 ">"</b>
+                    2b Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Explicabo libero distinctio maxime ea autem quibusdam laudantium,
+                    delectus provident placeat voluptatibus "
+                </i><br>
+                <span class="text-xl font-semibold">-lorem parental</span><br>
+            </div>
+        </div>
+    </div>
+    
+    <div class="px-10 overflow-x-auto md:px-20">
+        <div class="grid-cols-12 gap-5 text-gray-700 md:flex ">
+            {% for testimony in testimonies %}
+            <div class="col-span-6 px-3 py-5">
+                <i class="px-10 text-md">
+                    <b class="text-5xl text-red-700 ">"</b>
+                    {{testimony.write_up}}
+                </i>
+                <span class="text-xl font-semibold">
+                    -{{testimony.First_name}}&nbsp;{{testimony.Last_name}}
+                </span><br>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</div>
+    <!--**** submiting testimony ****-->
+    <div class="border ">
+        <span class="px-5 py-5 mt-5 text-xl">
+            submit testimony
+        </span>
+        <div class="flex justify-center py-4 bg-gray-100 md:w-3/5">
+            <form action="" method="post" class="w-4/5 px-5">
+                {% csrf_token %}
+                {{testimonyform|crispy}}
+                <button type="submit" class="justify-center px-24 py-2 bg-blue-200 shadow-xl rounded-xl hover:bg-blue-300">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+    <!--**** / .submiting testimony ****-->
